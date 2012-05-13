@@ -18,6 +18,11 @@
 		26E999A0155FF53B007F9E5F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 26E9999D155FF53B007F9E5F /* InfoPlist.strings */; };
 		26E999A1155FF53B007F9E5F /* ImageFlowViewer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26E9999F155FF53B007F9E5F /* ImageFlowViewer-Info.plist */; };
 		26E999A4155FF56C007F9E5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E999A3155FF56C007F9E5F /* main.m */; };
+		26E999AF155FF9EF007F9E5F /* image0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26E999AA155FF9EF007F9E5F /* image0.jpg */; };
+		26E999B0155FF9EF007F9E5F /* image1.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 26E999AB155FF9EF007F9E5F /* image1.JPG */; };
+		26E999B1155FF9EF007F9E5F /* image2.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 26E999AC155FF9EF007F9E5F /* image2.JPG */; };
+		26E999B2155FF9EF007F9E5F /* image3.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 26E999AD155FF9EF007F9E5F /* image3.JPG */; };
+		26E999B3155FF9EF007F9E5F /* image4.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 26E999AE155FF9EF007F9E5F /* image4.JPG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,11 @@
 		26E9999F155FF53B007F9E5F /* ImageFlowViewer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "ImageFlowViewer-Info.plist"; path = "ImageFlowViewer/ImageFlowViewer-Info.plist"; sourceTree = SOURCE_ROOT; };
 		26E999A2155FF56C007F9E5F /* ImageFlowViewer-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ImageFlowViewer-Prefix.pch"; path = "ImageFlowViewer/ImageFlowViewer-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		26E999A3155FF56C007F9E5F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ImageFlowViewer/main.m; sourceTree = SOURCE_ROOT; };
+		26E999AA155FF9EF007F9E5F /* image0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image0.jpg; sourceTree = "<group>"; };
+		26E999AB155FF9EF007F9E5F /* image1.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.JPG; sourceTree = "<group>"; };
+		26E999AC155FF9EF007F9E5F /* image2.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.JPG; sourceTree = "<group>"; };
+		26E999AD155FF9EF007F9E5F /* image3.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image3.JPG; sourceTree = "<group>"; };
+		26E999AE155FF9EF007F9E5F /* image4.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image4.JPG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +113,7 @@
 		26E99958155FB175007F9E5F /* ImageFlowViewer */ = {
 			isa = PBXGroup;
 			children = (
+				26E999A9155FF9EF007F9E5F /* resources */,
 				26E99996155FF442007F9E5F /* AppDelegate.h */,
 				26E99997155FF442007F9E5F /* AppDelegate.m */,
 				26E99998155FF442007F9E5F /* ViewController.h */,
@@ -131,6 +142,19 @@
 			);
 			name = en.lproj;
 			path = ImageFlowViewer/en.lproj;
+			sourceTree = SOURCE_ROOT;
+		};
+		26E999A9155FF9EF007F9E5F /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				26E999AA155FF9EF007F9E5F /* image0.jpg */,
+				26E999AB155FF9EF007F9E5F /* image1.JPG */,
+				26E999AC155FF9EF007F9E5F /* image2.JPG */,
+				26E999AD155FF9EF007F9E5F /* image3.JPG */,
+				26E999AE155FF9EF007F9E5F /* image4.JPG */,
+			);
+			name = resources;
+			path = ImageFlowViewer/resources;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -206,6 +230,11 @@
 			files = (
 				26E999A0155FF53B007F9E5F /* InfoPlist.strings in Resources */,
 				26E999A1155FF53B007F9E5F /* ImageFlowViewer-Info.plist in Resources */,
+				26E999AF155FF9EF007F9E5F /* image0.jpg in Resources */,
+				26E999B0155FF9EF007F9E5F /* image1.JPG in Resources */,
+				26E999B1155FF9EF007F9E5F /* image2.JPG in Resources */,
+				26E999B2155FF9EF007F9E5F /* image3.JPG in Resources */,
+				26E999B3155FF9EF007F9E5F /* image4.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

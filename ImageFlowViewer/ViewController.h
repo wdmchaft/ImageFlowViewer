@@ -18,4 +18,5 @@
 @property ( nonatomic, strong ) UIImageView* rightView;
 @property ( nonatomic, strong ) UIImageView* centerView;
 
+
 @end

@@ -10,10 +10,16 @@
 
 @interface ViewController ()
 
+@property ( nonatomic, assign ) int pageIndex;
+
+- ( void ) layoutViews;
+- ( void ) setImage: ( UIImageView* ) view  index: ( int ) number;
+
 @end
 
 @implementation ViewController
 @synthesize scrollView, subScrollView, container, leftView, centerView, rightView;
+@synthesize pageIndex;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,9 +36,13 @@
 	
     CGRect frame;
     CGSize size = self.view.frame.size;
+    
+    float navigationbarHeight = self.navigationController.navigationBar.frame.size.height;
+    float toolbarHeight = self.navigationController.toolbar.frame.size.height;
+    
     NSLog( @"Frame size: %f, %f", size.width, size.height );
     
-    frame = CGRectMake( 0, 0, size.width * 3, size.height );
+    frame = CGRectMake( 0, 0, size.width * 3, size.height - navigationbarHeight - toolbarHeight );
     scrollView = [ [ UIScrollView alloc ] initWithFrame: frame ];
     container = [ [ UIView alloc ] initWithFrame: frame ];
     
@@ -52,6 +62,15 @@
     
     [ scrollView addSubview: container ];
     scrollView.contentSize = container.frame.size;
+    
+    self.view = scrollView;
+    scrollView.backgroundColor = [ UIColor grayColor ];
+    
+    [ self setImage:leftView index: 0 ];
+    [ self setImage:centerView index: 1 ];
+    [ self setImage:rightView index: 2];
+    
+    pageIndex = -1;
 }
 
 - (void)viewDidUnload
@@ -66,12 +85,34 @@
 }
 
 
-- (void)scrollViewDidEndDragging:(UIScrollView*)scrollView 
-                  willDecelerate:(BOOL)decelerate
+// ドラッグ終了
+- (void)scrollViewDidEndDragging:(UIScrollView*)scroll willDecelerate:(BOOL)decelerate
 {
-    
+    if ( scroll == self.scrollView ) {
+        
+        // 加速無し
+        if ( !decelerate ) [ self layoutViews ];
+    }
+}
+
+// フリック操作によるスクロール終了
+- (void)scrollViewDidEndDecelerating:(UIScrollView*)scrollView
+{
+    [ self layoutViews ];
 }
 
 
+- ( void ) setImage: ( UIImageView* ) view  index: ( int ) number
+{
+    NSString* file = [ NSString stringWithFormat:@"image%d",  number ];
+    NSString* path = [ [ NSBundle mainBundle ] pathForResource: file ofType:@"jpg"];
+    UIImage* image = [ [ UIImage alloc] initWithContentsOfFile: path ];
+    view.image = image;
+}
+
+- ( void ) layoutViews
+{
+    
+}
 
 @end
