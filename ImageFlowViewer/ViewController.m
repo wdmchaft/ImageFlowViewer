@@ -65,4 +65,13 @@
 	return YES;
 }
 
+
+- (void)scrollViewDidEndDragging:(UIScrollView*)scrollView 
+                  willDecelerate:(BOOL)decelerate
+{
+    
+}
+
+
+
 @end

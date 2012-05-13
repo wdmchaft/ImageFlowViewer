@@ -10,15 +10,14 @@
 		26E99953155FB175007F9E5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E99952155FB175007F9E5F /* UIKit.framework */; };
 		26E99955155FB175007F9E5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E99954155FB175007F9E5F /* Foundation.framework */; };
 		26E99957155FB175007F9E5F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E99956155FB175007F9E5F /* CoreGraphics.framework */; };
-		26E9995D155FB175007F9E5F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 26E9995B155FB175007F9E5F /* InfoPlist.strings */; };
-		26E9995F155FB175007F9E5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E9995E155FB175007F9E5F /* main.m */; };
-		26E99963155FB175007F9E5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E99962155FB175007F9E5F /* AppDelegate.m */; };
 		26E9996B155FB175007F9E5F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E9996A155FB175007F9E5F /* SenTestingKit.framework */; };
 		26E9996C155FB175007F9E5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E99952155FB175007F9E5F /* UIKit.framework */; };
 		26E9996D155FB175007F9E5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E99954155FB175007F9E5F /* Foundation.framework */; };
-		26E99975155FB175007F9E5F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 26E99973155FB175007F9E5F /* InfoPlist.strings */; };
-		26E99978155FB175007F9E5F /* ImageFlowedViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E99977155FB175007F9E5F /* ImageFlowedViewerTests.m */; };
-		26E99983155FB1F3007F9E5F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E99982155FB1F3007F9E5F /* ViewController.m */; };
+		26E9999A155FF442007F9E5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E99997155FF442007F9E5F /* AppDelegate.m */; };
+		26E9999B155FF442007F9E5F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E99999155FF442007F9E5F /* ViewController.m */; };
+		26E999A0155FF53B007F9E5F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 26E9999D155FF53B007F9E5F /* InfoPlist.strings */; };
+		26E999A1155FF53B007F9E5F /* ImageFlowViewer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26E9999F155FF53B007F9E5F /* ImageFlowViewer-Info.plist */; };
+		26E999A4155FF56C007F9E5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E999A3155FF56C007F9E5F /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,24 +31,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		26E9994E155FB175007F9E5F /* ImageFlowedViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageFlowedViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		26E9994E155FB175007F9E5F /* ImageFlowViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageFlowViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E99952155FB175007F9E5F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		26E99954155FB175007F9E5F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		26E99956155FB175007F9E5F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		26E9995A155FB175007F9E5F /* ImageFlowedViewer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ImageFlowedViewer-Info.plist"; sourceTree = "<group>"; };
-		26E9995C155FB175007F9E5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		26E9995E155FB175007F9E5F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		26E99960155FB175007F9E5F /* ImageFlowedViewer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageFlowedViewer-Prefix.pch"; sourceTree = "<group>"; };
-		26E99961155FB175007F9E5F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		26E99962155FB175007F9E5F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		26E99969155FB175007F9E5F /* ImageFlowedViewerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageFlowedViewerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26E99969155FB175007F9E5F /* ImageFlowViewerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageFlowViewerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E9996A155FB175007F9E5F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		26E99972155FB175007F9E5F /* ImageFlowedViewerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ImageFlowedViewerTests-Info.plist"; sourceTree = "<group>"; };
-		26E99974155FB175007F9E5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		26E99976155FB175007F9E5F /* ImageFlowedViewerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFlowedViewerTests.h; sourceTree = "<group>"; };
-		26E99977155FB175007F9E5F /* ImageFlowedViewerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageFlowedViewerTests.m; sourceTree = "<group>"; };
-		26E99981155FB1F3007F9E5F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		26E99982155FB1F3007F9E5F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		26E99996155FF442007F9E5F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ImageFlowViewer/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		26E99997155FF442007F9E5F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ImageFlowViewer/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		26E99998155FF442007F9E5F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ImageFlowViewer/ViewController.h; sourceTree = SOURCE_ROOT; };
+		26E99999155FF442007F9E5F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ImageFlowViewer/ViewController.m; sourceTree = SOURCE_ROOT; };
+		26E9999E155FF53B007F9E5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		26E9999F155FF53B007F9E5F /* ImageFlowViewer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "ImageFlowViewer-Info.plist"; path = "ImageFlowViewer/ImageFlowViewer-Info.plist"; sourceTree = SOURCE_ROOT; };
+		26E999A2155FF56C007F9E5F /* ImageFlowViewer-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ImageFlowViewer-Prefix.pch"; path = "ImageFlowViewer/ImageFlowViewer-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		26E999A3155FF56C007F9E5F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ImageFlowViewer/main.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +74,7 @@
 		26E99943155FB174007F9E5F = {
 			isa = PBXGroup;
 			children = (
-				26E99958155FB175007F9E5F /* ImageFlowedViewer */,
-				26E99970155FB175007F9E5F /* ImageFlowedViewerTests */,
+				26E99958155FB175007F9E5F /* ImageFlowViewer */,
 				26E99951155FB175007F9E5F /* Frameworks */,
 				26E9994F155FB175007F9E5F /* Products */,
 			);
@@ -89,8 +83,8 @@
 		26E9994F155FB175007F9E5F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				26E9994E155FB175007F9E5F /* ImageFlowedViewer.app */,
-				26E99969155FB175007F9E5F /* ImageFlowedViewerTests.octest */,
+				26E9994E155FB175007F9E5F /* ImageFlowViewer.app */,
+				26E99969155FB175007F9E5F /* ImageFlowViewerTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,54 +100,45 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		26E99958155FB175007F9E5F /* ImageFlowedViewer */ = {
+		26E99958155FB175007F9E5F /* ImageFlowViewer */ = {
 			isa = PBXGroup;
 			children = (
-				26E99961155FB175007F9E5F /* AppDelegate.h */,
-				26E99962155FB175007F9E5F /* AppDelegate.m */,
+				26E99996155FF442007F9E5F /* AppDelegate.h */,
+				26E99997155FF442007F9E5F /* AppDelegate.m */,
+				26E99998155FF442007F9E5F /* ViewController.h */,
+				26E99999155FF442007F9E5F /* ViewController.m */,
 				26E99959155FB175007F9E5F /* Supporting Files */,
-				26E99981155FB1F3007F9E5F /* ViewController.h */,
-				26E99982155FB1F3007F9E5F /* ViewController.m */,
 			);
+			name = ImageFlowViewer;
 			path = ImageFlowedViewer;
 			sourceTree = "<group>";
 		};
 		26E99959155FB175007F9E5F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				26E9995A155FB175007F9E5F /* ImageFlowedViewer-Info.plist */,
-				26E9995B155FB175007F9E5F /* InfoPlist.strings */,
-				26E9995E155FB175007F9E5F /* main.m */,
-				26E99960155FB175007F9E5F /* ImageFlowedViewer-Prefix.pch */,
+				26E999A2155FF56C007F9E5F /* ImageFlowViewer-Prefix.pch */,
+				26E999A3155FF56C007F9E5F /* main.m */,
+				26E9999C155FF53B007F9E5F /* en.lproj */,
+				26E9999F155FF53B007F9E5F /* ImageFlowViewer-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		26E99970155FB175007F9E5F /* ImageFlowedViewerTests */ = {
+		26E9999C155FF53B007F9E5F /* en.lproj */ = {
 			isa = PBXGroup;
 			children = (
-				26E99976155FB175007F9E5F /* ImageFlowedViewerTests.h */,
-				26E99977155FB175007F9E5F /* ImageFlowedViewerTests.m */,
-				26E99971155FB175007F9E5F /* Supporting Files */,
+				26E9999D155FF53B007F9E5F /* InfoPlist.strings */,
 			);
-			path = ImageFlowedViewerTests;
-			sourceTree = "<group>";
-		};
-		26E99971155FB175007F9E5F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				26E99972155FB175007F9E5F /* ImageFlowedViewerTests-Info.plist */,
-				26E99973155FB175007F9E5F /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
+			name = en.lproj;
+			path = ImageFlowViewer/en.lproj;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		26E9994D155FB175007F9E5F /* ImageFlowedViewer */ = {
+		26E9994D155FB175007F9E5F /* ImageFlowViewer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 26E9997B155FB175007F9E5F /* Build configuration list for PBXNativeTarget "ImageFlowedViewer" */;
+			buildConfigurationList = 26E9997B155FB175007F9E5F /* Build configuration list for PBXNativeTarget "ImageFlowViewer" */;
 			buildPhases = (
 				26E9994A155FB175007F9E5F /* Sources */,
 				26E9994B155FB175007F9E5F /* Frameworks */,
@@ -163,14 +148,14 @@
 			);
 			dependencies = (
 			);
-			name = ImageFlowedViewer;
+			name = ImageFlowViewer;
 			productName = ImageFlowedViewer;
-			productReference = 26E9994E155FB175007F9E5F /* ImageFlowedViewer.app */;
+			productReference = 26E9994E155FB175007F9E5F /* ImageFlowViewer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		26E99968155FB175007F9E5F /* ImageFlowedViewerTests */ = {
+		26E99968155FB175007F9E5F /* ImageFlowViewerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 26E9997E155FB175007F9E5F /* Build configuration list for PBXNativeTarget "ImageFlowedViewerTests" */;
+			buildConfigurationList = 26E9997E155FB175007F9E5F /* Build configuration list for PBXNativeTarget "ImageFlowViewerTests" */;
 			buildPhases = (
 				26E99964155FB175007F9E5F /* Sources */,
 				26E99965155FB175007F9E5F /* Frameworks */,
@@ -182,9 +167,9 @@
 			dependencies = (
 				26E9996F155FB175007F9E5F /* PBXTargetDependency */,
 			);
-			name = ImageFlowedViewerTests;
+			name = ImageFlowViewerTests;
 			productName = ImageFlowedViewerTests;
-			productReference = 26E99969155FB175007F9E5F /* ImageFlowedViewerTests.octest */;
+			productReference = 26E99969155FB175007F9E5F /* ImageFlowViewerTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -196,7 +181,7 @@
 				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = n/a;
 			};
-			buildConfigurationList = 26E99948155FB174007F9E5F /* Build configuration list for PBXProject "ImageFlowedViewer" */;
+			buildConfigurationList = 26E99948155FB174007F9E5F /* Build configuration list for PBXProject "ImageFlowViewer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -208,8 +193,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				26E9994D155FB175007F9E5F /* ImageFlowedViewer */,
-				26E99968155FB175007F9E5F /* ImageFlowedViewerTests */,
+				26E9994D155FB175007F9E5F /* ImageFlowViewer */,
+				26E99968155FB175007F9E5F /* ImageFlowViewerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -219,7 +204,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26E9995D155FB175007F9E5F /* InfoPlist.strings in Resources */,
+				26E999A0155FF53B007F9E5F /* InfoPlist.strings in Resources */,
+				26E999A1155FF53B007F9E5F /* ImageFlowViewer-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,7 +213,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26E99975155FB175007F9E5F /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,9 +239,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26E9995F155FB175007F9E5F /* main.m in Sources */,
-				26E99963155FB175007F9E5F /* AppDelegate.m in Sources */,
-				26E99983155FB1F3007F9E5F /* ViewController.m in Sources */,
+				26E9999A155FF442007F9E5F /* AppDelegate.m in Sources */,
+				26E9999B155FF442007F9E5F /* ViewController.m in Sources */,
+				26E999A4155FF56C007F9E5F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +249,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26E99978155FB175007F9E5F /* ImageFlowedViewerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,24 +257,16 @@
 /* Begin PBXTargetDependency section */
 		26E9996F155FB175007F9E5F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 26E9994D155FB175007F9E5F /* ImageFlowedViewer */;
+			target = 26E9994D155FB175007F9E5F /* ImageFlowViewer */;
 			targetProxy = 26E9996E155FB175007F9E5F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		26E9995B155FB175007F9E5F /* InfoPlist.strings */ = {
+		26E9999D155FF53B007F9E5F /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				26E9995C155FB175007F9E5F /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		26E99973155FB175007F9E5F /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				26E99974155FB175007F9E5F /* en */,
+				26E9999E155FF53B007F9E5F /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -349,9 +325,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ImageFlowedViewer/ImageFlowedViewer-Prefix.pch";
-				INFOPLIST_FILE = "ImageFlowedViewer/ImageFlowedViewer-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "ImageFlowViewer/ImageFlowViewer-Prefix.pch";
+				INFOPLIST_FILE = "ImageFlowViewer/ImageFlowViewer-Info.plist";
+				PRODUCT_NAME = ImageFlowViewer;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -360,9 +336,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ImageFlowedViewer/ImageFlowedViewer-Prefix.pch";
-				INFOPLIST_FILE = "ImageFlowedViewer/ImageFlowedViewer-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "ImageFlowViewer/ImageFlowViewer-Prefix.pch";
+				INFOPLIST_FILE = "ImageFlowViewer/ImageFlowViewer-Info.plist";
+				PRODUCT_NAME = ImageFlowViewer;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -377,8 +353,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageFlowedViewer/ImageFlowedViewer-Prefix.pch";
-				INFOPLIST_FILE = "ImageFlowedViewerTests/ImageFlowedViewerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "ImageFlowedViewerTests/ImageFlowViewerTests-Info.plist";
+				PRODUCT_NAME = ImageFlowViewerTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -394,8 +370,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageFlowedViewer/ImageFlowedViewer-Prefix.pch";
-				INFOPLIST_FILE = "ImageFlowedViewerTests/ImageFlowedViewerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "ImageFlowedViewerTests/ImageFlowViewerTests-Info.plist";
+				PRODUCT_NAME = ImageFlowViewerTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -404,7 +380,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		26E99948155FB174007F9E5F /* Build configuration list for PBXProject "ImageFlowedViewer" */ = {
+		26E99948155FB174007F9E5F /* Build configuration list for PBXProject "ImageFlowViewer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				26E99979155FB175007F9E5F /* Debug */,
@@ -413,21 +389,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		26E9997B155FB175007F9E5F /* Build configuration list for PBXNativeTarget "ImageFlowedViewer" */ = {
+		26E9997B155FB175007F9E5F /* Build configuration list for PBXNativeTarget "ImageFlowViewer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				26E9997C155FB175007F9E5F /* Debug */,
 				26E9997D155FB175007F9E5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		26E9997E155FB175007F9E5F /* Build configuration list for PBXNativeTarget "ImageFlowedViewerTests" */ = {
+		26E9997E155FB175007F9E5F /* Build configuration list for PBXNativeTarget "ImageFlowViewerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				26E9997F155FB175007F9E5F /* Debug */,
 				26E99980155FB175007F9E5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
