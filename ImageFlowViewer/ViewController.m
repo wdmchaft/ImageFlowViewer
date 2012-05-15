@@ -7,19 +7,20 @@
 //
 
 #import "ViewController.h"
+#import "ImageScrollView.h"
 
 @interface ViewController ()
 
 @property ( nonatomic, assign ) int pageIndex;
 
 - ( void ) layoutViews;
-- ( void ) setImage: ( UIImageView* ) view  index: ( int ) number;
-
+- ( void ) updateView;
 @end
 
 @implementation ViewController
-@synthesize scrollView, subScrollView, container, leftView, centerView, rightView;
+@synthesize scrollView,  container, leftView, centerView, rightView;
 @synthesize pageIndex;
+@synthesize pageSize;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,6 +37,7 @@
 	
     CGRect frame;
     CGSize size = self.view.frame.size;
+    pageSize = size;
     
     float navigationbarHeight = self.navigationController.navigationBar.frame.size.height;
     float toolbarHeight = self.navigationController.toolbar.frame.size.height;
@@ -44,20 +46,19 @@
     
     frame = CGRectMake( 0, 0, size.width * 3, size.height - navigationbarHeight - toolbarHeight );
     scrollView = [ [ UIScrollView alloc ] initWithFrame: frame ];
+    scrollView.delegate = self;
+    
     container = [ [ UIView alloc ] initWithFrame: frame ];
     
     frame = CGRectMake( 0, 0, size.width, size.height );
-    leftView =  [ [ UIImageView alloc ] initWithFrame: frame ];
-    centerView = [ [ UIImageView alloc ] initWithFrame: frame ];
-    
+    leftView =  [ [ ImageScrollView alloc ] initWithFrame: frame ];
     frame.origin.x = size.width;
-    subScrollView = [ [ UIScrollView alloc ] initWithFrame: frame ];
+    centerView = [ [ ImageScrollView alloc ] initWithFrame: frame ];
     frame.origin.x = size.width * 2.0;
-    rightView =  [ [ UIImageView alloc ] initWithFrame: frame ];
+    rightView =  [ [ ImageScrollView alloc ] initWithFrame: frame ];
     
     [ container addSubview: leftView ];
-    [ subScrollView addSubview: centerView ];
-    [ container addSubview: subScrollView ];
+    [ container addSubview: centerView ];
     [ container addSubview: rightView ];
     
     [ scrollView addSubview: container ];
@@ -66,9 +67,13 @@
     self.view = scrollView;
     scrollView.backgroundColor = [ UIColor grayColor ];
     
-    [ self setImage:leftView index: 0 ];
-    [ self setImage:centerView index: 1 ];
-    [ self setImage:rightView index: 2];
+    UIImage* image = [ UIImage imageNamed: @"image1.jpg" ];
+    [ leftView setImage:  image ];
+    image =[ UIImage imageNamed: @"image2.jpg" ];
+    [ centerView setImage: image ];
+    image =[ UIImage imageNamed: @"image3.jpg" ];
+    [ rightView setImage: image ];
+
     
     pageIndex = -1;
 }
@@ -84,6 +89,10 @@
 	return YES;
 }
 
+-( void ) updateView
+{
+    
+}
 
 // ドラッグ終了
 - (void)scrollViewDidEndDragging:(UIScrollView*)scroll willDecelerate:(BOOL)decelerate
@@ -102,16 +111,13 @@
 }
 
 
-- ( void ) setImage: ( UIImageView* ) view  index: ( int ) number
-{
-    NSString* file = [ NSString stringWithFormat:@"image%d",  number ];
-    NSString* path = [ [ NSBundle mainBundle ] pathForResource: file ofType:@"jpg"];
-    UIImage* image = [ [ UIImage alloc] initWithContentsOfFile: path ];
-    view.image = image;
-}
+
 
 - ( void ) layoutViews
 {
+    
+    int currentIndex = ( int ) ( self.scrollView.contentOffset.x / pageSize.width );
+    NSLog( @"current view index: %d", currentIndex );
     
 }
 

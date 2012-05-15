@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26A528F415615BFE00BFCD79 /* image0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26A528EE15615BFE00BFCD79 /* image0.jpg */; };
+		26A528F515615BFE00BFCD79 /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26A528EF15615BFE00BFCD79 /* image1.jpg */; };
+		26A528F615615BFE00BFCD79 /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26A528F015615BFE00BFCD79 /* image2.jpg */; };
+		26A528F715615BFE00BFCD79 /* image3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26A528F115615BFE00BFCD79 /* image3.jpg */; };
+		26A528F815615BFE00BFCD79 /* image4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26A528F215615BFE00BFCD79 /* image4.jpg */; };
+		26A528F915615BFE00BFCD79 /* image5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26A528F315615BFE00BFCD79 /* image5.jpg */; };
+		26A551931562A1B4009BC840 /* ImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A551921562A1B4009BC840 /* ImageScrollView.m */; };
 		26E99953155FB175007F9E5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E99952155FB175007F9E5F /* UIKit.framework */; };
 		26E99955155FB175007F9E5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E99954155FB175007F9E5F /* Foundation.framework */; };
 		26E99957155FB175007F9E5F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E99956155FB175007F9E5F /* CoreGraphics.framework */; };
@@ -16,13 +23,7 @@
 		26E9999A155FF442007F9E5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E99997155FF442007F9E5F /* AppDelegate.m */; };
 		26E9999B155FF442007F9E5F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E99999155FF442007F9E5F /* ViewController.m */; };
 		26E999A0155FF53B007F9E5F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 26E9999D155FF53B007F9E5F /* InfoPlist.strings */; };
-		26E999A1155FF53B007F9E5F /* ImageFlowViewer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26E9999F155FF53B007F9E5F /* ImageFlowViewer-Info.plist */; };
 		26E999A4155FF56C007F9E5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E999A3155FF56C007F9E5F /* main.m */; };
-		26E999AF155FF9EF007F9E5F /* image0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26E999AA155FF9EF007F9E5F /* image0.jpg */; };
-		26E999B0155FF9EF007F9E5F /* image1.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 26E999AB155FF9EF007F9E5F /* image1.JPG */; };
-		26E999B1155FF9EF007F9E5F /* image2.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 26E999AC155FF9EF007F9E5F /* image2.JPG */; };
-		26E999B2155FF9EF007F9E5F /* image3.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 26E999AD155FF9EF007F9E5F /* image3.JPG */; };
-		26E999B3155FF9EF007F9E5F /* image4.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 26E999AE155FF9EF007F9E5F /* image4.JPG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		26A528EE15615BFE00BFCD79 /* image0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image0.jpg; path = ImageFlowViewer/resources/image0.jpg; sourceTree = SOURCE_ROOT; };
+		26A528EF15615BFE00BFCD79 /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image1.jpg; path = ImageFlowViewer/resources/image1.jpg; sourceTree = SOURCE_ROOT; };
+		26A528F015615BFE00BFCD79 /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image2.jpg; path = ImageFlowViewer/resources/image2.jpg; sourceTree = SOURCE_ROOT; };
+		26A528F115615BFE00BFCD79 /* image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image3.jpg; path = ImageFlowViewer/resources/image3.jpg; sourceTree = SOURCE_ROOT; };
+		26A528F215615BFE00BFCD79 /* image4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image4.jpg; path = ImageFlowViewer/resources/image4.jpg; sourceTree = SOURCE_ROOT; };
+		26A528F315615BFE00BFCD79 /* image5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image5.jpg; path = ImageFlowViewer/resources/image5.jpg; sourceTree = SOURCE_ROOT; };
+		26A551911562A1B4009BC840 /* ImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScrollView.h; sourceTree = SOURCE_ROOT; };
+		26A551921562A1B4009BC840 /* ImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageScrollView.m; sourceTree = SOURCE_ROOT; };
 		26E9994E155FB175007F9E5F /* ImageFlowViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageFlowViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E99952155FB175007F9E5F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		26E99954155FB175007F9E5F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -50,11 +59,6 @@
 		26E9999F155FF53B007F9E5F /* ImageFlowViewer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "ImageFlowViewer-Info.plist"; path = "ImageFlowViewer/ImageFlowViewer-Info.plist"; sourceTree = SOURCE_ROOT; };
 		26E999A2155FF56C007F9E5F /* ImageFlowViewer-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ImageFlowViewer-Prefix.pch"; path = "ImageFlowViewer/ImageFlowViewer-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		26E999A3155FF56C007F9E5F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ImageFlowViewer/main.m; sourceTree = SOURCE_ROOT; };
-		26E999AA155FF9EF007F9E5F /* image0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image0.jpg; sourceTree = "<group>"; };
-		26E999AB155FF9EF007F9E5F /* image1.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.JPG; sourceTree = "<group>"; };
-		26E999AC155FF9EF007F9E5F /* image2.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.JPG; sourceTree = "<group>"; };
-		26E999AD155FF9EF007F9E5F /* image3.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image3.JPG; sourceTree = "<group>"; };
-		26E999AE155FF9EF007F9E5F /* image4.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image4.JPG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26A528D015615BB800BFCD79 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				26A528EE15615BFE00BFCD79 /* image0.jpg */,
+				26A528EF15615BFE00BFCD79 /* image1.jpg */,
+				26A528F015615BFE00BFCD79 /* image2.jpg */,
+				26A528F115615BFE00BFCD79 /* image3.jpg */,
+				26A528F215615BFE00BFCD79 /* image4.jpg */,
+				26A528F315615BFE00BFCD79 /* image5.jpg */,
+			);
+			name = resources;
+			path = ../../../../Desktop/resources;
+			sourceTree = "<group>";
+		};
 		26E99943155FB174007F9E5F = {
 			isa = PBXGroup;
 			children = (
@@ -113,12 +131,14 @@
 		26E99958155FB175007F9E5F /* ImageFlowViewer */ = {
 			isa = PBXGroup;
 			children = (
-				26E999A9155FF9EF007F9E5F /* resources */,
+				26A528D015615BB800BFCD79 /* resources */,
 				26E99996155FF442007F9E5F /* AppDelegate.h */,
 				26E99997155FF442007F9E5F /* AppDelegate.m */,
 				26E99998155FF442007F9E5F /* ViewController.h */,
 				26E99999155FF442007F9E5F /* ViewController.m */,
 				26E99959155FB175007F9E5F /* Supporting Files */,
+				26A551911562A1B4009BC840 /* ImageScrollView.h */,
+				26A551921562A1B4009BC840 /* ImageScrollView.m */,
 			);
 			name = ImageFlowViewer;
 			path = ImageFlowedViewer;
@@ -142,19 +162,6 @@
 			);
 			name = en.lproj;
 			path = ImageFlowViewer/en.lproj;
-			sourceTree = SOURCE_ROOT;
-		};
-		26E999A9155FF9EF007F9E5F /* resources */ = {
-			isa = PBXGroup;
-			children = (
-				26E999AA155FF9EF007F9E5F /* image0.jpg */,
-				26E999AB155FF9EF007F9E5F /* image1.JPG */,
-				26E999AC155FF9EF007F9E5F /* image2.JPG */,
-				26E999AD155FF9EF007F9E5F /* image3.JPG */,
-				26E999AE155FF9EF007F9E5F /* image4.JPG */,
-			);
-			name = resources;
-			path = ImageFlowViewer/resources;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -229,12 +236,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				26E999A0155FF53B007F9E5F /* InfoPlist.strings in Resources */,
-				26E999A1155FF53B007F9E5F /* ImageFlowViewer-Info.plist in Resources */,
-				26E999AF155FF9EF007F9E5F /* image0.jpg in Resources */,
-				26E999B0155FF9EF007F9E5F /* image1.JPG in Resources */,
-				26E999B1155FF9EF007F9E5F /* image2.JPG in Resources */,
-				26E999B2155FF9EF007F9E5F /* image3.JPG in Resources */,
-				26E999B3155FF9EF007F9E5F /* image4.JPG in Resources */,
+				26A528F415615BFE00BFCD79 /* image0.jpg in Resources */,
+				26A528F515615BFE00BFCD79 /* image1.jpg in Resources */,
+				26A528F615615BFE00BFCD79 /* image2.jpg in Resources */,
+				26A528F715615BFE00BFCD79 /* image3.jpg in Resources */,
+				26A528F815615BFE00BFCD79 /* image4.jpg in Resources */,
+				26A528F915615BFE00BFCD79 /* image5.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +278,7 @@
 				26E9999A155FF442007F9E5F /* AppDelegate.m in Sources */,
 				26E9999B155FF442007F9E5F /* ViewController.m in Sources */,
 				26E999A4155FF56C007F9E5F /* main.m in Sources */,
+				26A551931562A1B4009BC840 /* ImageScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
