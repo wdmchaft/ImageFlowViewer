@@ -12,7 +12,7 @@
 		26A528F715615BFE00BFCD79 /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26A528F115615BFE00BFCD79 /* image2.jpg */; };
 		26A528F815615BFE00BFCD79 /* image3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26A528F215615BFE00BFCD79 /* image3.jpg */; };
 		26A528F915615BFE00BFCD79 /* image4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26A528F315615BFE00BFCD79 /* image4.jpg */; };
-		26A551931562A1B4009BC840 /* ImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A551921562A1B4009BC840 /* ImageScrollView.m */; };
+		26A60B751565482200A74DDC /* ImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A60B741565482200A74DDC /* ImageScrollView.m */; };
 		26E99953155FB175007F9E5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E99952155FB175007F9E5F /* UIKit.framework */; };
 		26E99955155FB175007F9E5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E99954155FB175007F9E5F /* Foundation.framework */; };
 		26E99957155FB175007F9E5F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E99956155FB175007F9E5F /* CoreGraphics.framework */; };
@@ -41,8 +41,8 @@
 		26A528F115615BFE00BFCD79 /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image2.jpg; path = ImageFlowViewer/resources/image2.jpg; sourceTree = SOURCE_ROOT; };
 		26A528F215615BFE00BFCD79 /* image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image3.jpg; path = ImageFlowViewer/resources/image3.jpg; sourceTree = SOURCE_ROOT; };
 		26A528F315615BFE00BFCD79 /* image4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image4.jpg; path = ImageFlowViewer/resources/image4.jpg; sourceTree = SOURCE_ROOT; };
-		26A551911562A1B4009BC840 /* ImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScrollView.h; sourceTree = SOURCE_ROOT; };
-		26A551921562A1B4009BC840 /* ImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageScrollView.m; sourceTree = SOURCE_ROOT; };
+		26A60B731565482200A74DDC /* ImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageScrollView.h; path = ImageFlowViewer/ImageScrollView.h; sourceTree = SOURCE_ROOT; };
+		26A60B741565482200A74DDC /* ImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageScrollView.m; path = ImageFlowViewer/ImageScrollView.m; sourceTree = SOURCE_ROOT; };
 		26E9994E155FB175007F9E5F /* ImageFlowViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageFlowViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E99952155FB175007F9E5F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		26E99954155FB175007F9E5F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -128,14 +128,14 @@
 		26E99958155FB175007F9E5F /* ImageFlowViewer */ = {
 			isa = PBXGroup;
 			children = (
+				26A60B731565482200A74DDC /* ImageScrollView.h */,
+				26A60B741565482200A74DDC /* ImageScrollView.m */,
 				26A528D015615BB800BFCD79 /* resources */,
 				26E99996155FF442007F9E5F /* AppDelegate.h */,
 				26E99997155FF442007F9E5F /* AppDelegate.m */,
 				26E99998155FF442007F9E5F /* ViewController.h */,
 				26E99999155FF442007F9E5F /* ViewController.m */,
 				26E99959155FB175007F9E5F /* Supporting Files */,
-				26A551911562A1B4009BC840 /* ImageScrollView.h */,
-				26A551921562A1B4009BC840 /* ImageScrollView.m */,
 			);
 			name = ImageFlowViewer;
 			path = ImageFlowedViewer;
@@ -274,7 +274,7 @@
 				26E9999A155FF442007F9E5F /* AppDelegate.m in Sources */,
 				26E9999B155FF442007F9E5F /* ViewController.m in Sources */,
 				26E999A4155FF56C007F9E5F /* main.m in Sources */,
-				26A551931562A1B4009BC840 /* ImageScrollView.m in Sources */,
+				26A60B751565482200A74DDC /* ImageScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
