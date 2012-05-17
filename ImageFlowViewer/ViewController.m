@@ -11,16 +11,25 @@
 
 @interface ViewController ()
 
-@property ( nonatomic, assign ) int pageIndex;
+@property ( nonatomic, assign ) int beginPageIndex;
+@property ( nonatomic, assign ) int pageMax;
+@property ( nonatomic, assign ) CGSize pageSize;
+@property ( nonatomic, assign ) CGRect left;
+@property ( nonatomic, assign ) CGRect center;
+@property ( nonatomic, assign ) CGRect right;
 
+- ( void ) setImage: ( ImageScrollView* ) imageView  index: ( int ) index;
 - ( void ) layoutViews;
 - ( void ) updateView;
+- ( void ) slideToRight;
+- ( void ) slideToLeft;
+
 @end
 
 @implementation ViewController
-@synthesize scrollView,  container, leftView, centerView, rightView;
-@synthesize pageIndex;
-@synthesize pageSize;
+@synthesize scrollView,  container, imageView0, imageView1, imageView2;
+@synthesize pageSize, beginPageIndex, pageMax;
+@synthesize left, center, right;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,11 +40,17 @@
     return self;
 }
 
+- ( void ) setImage: ( ImageScrollView* ) imageView  index: ( int ) index
+{
+    NSString* f = [ [ NSString alloc ] initWithFormat: @"image%d.jpg", index ];
+    UIImage* image = [ UIImage imageNamed: f ];
+    [ imageView setImage: image ];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
-    CGRect frame;
+
     CGSize size = self.view.frame.size;
     pageSize = size;
     
@@ -44,22 +59,26 @@
     
     NSLog( @"Frame size: %f, %f", size.width, size.height );
     
-    frame = CGRectMake( 0, 0, size.width * 3, size.height - navigationbarHeight - toolbarHeight );
+    CGRect frame = CGRectMake( 0, 0, size.width * 3, size.height - navigationbarHeight - toolbarHeight );
     scrollView = [ [ UIScrollView alloc ] initWithFrame: frame ];
     scrollView.delegate = self;
     
     container = [ [ UIView alloc ] initWithFrame: frame ];
     
-    frame = CGRectMake( 0, 0, size.width, size.height );
-    leftView =  [ [ ImageScrollView alloc ] initWithFrame: frame ];
-    frame.origin.x = size.width;
-    centerView = [ [ ImageScrollView alloc ] initWithFrame: frame ];
-    frame.origin.x = size.width * 2.0;
-    rightView =  [ [ ImageScrollView alloc ] initWithFrame: frame ];
+    left = CGRectMake( 0, 0, size.width, size.height );
+    imageView0 =  [ [ ImageScrollView alloc ] initWithFrame: left ];
+
+    center = left;
+    center.origin.x = size.width;
+    imageView1 = [ [ ImageScrollView alloc ] initWithFrame: center ];
     
-    [ container addSubview: leftView ];
-    [ container addSubview: centerView ];
-    [ container addSubview: rightView ];
+    right = left;
+    right.origin.x = size.width * 2.0;
+    imageView2 =  [ [ ImageScrollView alloc ] initWithFrame: right ];
+    
+    [ container addSubview: imageView0 ];
+    [ container addSubview: imageView1 ];
+    [ container addSubview: imageView2 ];
     
     [ scrollView addSubview: container ];
     scrollView.contentSize = container.frame.size;
@@ -67,15 +86,12 @@
     self.view = scrollView;
     scrollView.backgroundColor = [ UIColor grayColor ];
     
-    UIImage* image = [ UIImage imageNamed: @"image1.jpg" ];
-    [ leftView setImage:  image ];
-    image =[ UIImage imageNamed: @"image2.jpg" ];
-    [ centerView setImage: image ];
-    image =[ UIImage imageNamed: @"image3.jpg" ];
-    [ rightView setImage: image ];
-
+    [ self setImage: self.imageView0 index: 0 ];
+    [ self setImage: self.imageView1 index: 1 ];
+    [ self setImage: self.imageView2 index: 2 ];
     
-    pageIndex = -1;
+    pageMax = 5;
+    beginPageIndex = 0;
 }
 
 - (void)viewDidUnload
@@ -111,7 +127,29 @@
 }
 
 
+- ( void ) slideToRight
+{
+    if( beginPageIndex >= pageMax - 3 ) return;
+    beginPageIndex++;
+    [ self.imageView1 setFrame: left ];
+    [ self.imageView2 setFrame: center ];
+    [ self.imageView0 setFrame: right ];
+    self.scrollView.contentOffset = left.origin; 
+    
+    [ self setImage: self.imageView0 index: beginPageIndex + 2 ];
+    
+}
 
+- ( void ) slideToLeft
+{
+    if( beginPageIndex == 0 ) return;
+    beginPageIndex--;
+    [ self.imageView0 setFrame: center ];
+    [ self.imageView1 setFrame: right ];
+    [ self.imageView2 setFrame: left ];
+    self.scrollView.contentOffset = center.origin; 
+    [ self setImage: self.imageView2 index: beginPageIndex ]; 
+}
 
 - ( void ) layoutViews
 {
@@ -119,6 +157,8 @@
     int currentIndex = ( int ) ( self.scrollView.contentOffset.x / pageSize.width );
     NSLog( @"current view index: %d", currentIndex );
     
+    if( currentIndex >= 1 ) [ self slideToRight ];
+    else if ( currentIndex <= 0 ) [ self slideToLeft ];
 }
 
 @end
