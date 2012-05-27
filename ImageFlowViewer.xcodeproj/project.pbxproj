@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		26A528F415615BFE00BFCD79 /* image0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26A528EE15615BFE00BFCD79 /* image0.jpg */; };
-		26A528F515615BFE00BFCD79 /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26A528EF15615BFE00BFCD79 /* image1.jpg */; };
-		26A528F715615BFE00BFCD79 /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26A528F115615BFE00BFCD79 /* image2.jpg */; };
-		26A528F815615BFE00BFCD79 /* image3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26A528F215615BFE00BFCD79 /* image3.jpg */; };
-		26A528F915615BFE00BFCD79 /* image4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26A528F315615BFE00BFCD79 /* image4.jpg */; };
+		262148A8156F6C8F001EE193 /* image0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 262148A1156F6C8F001EE193 /* image0.jpg */; };
+		262148A9156F6C8F001EE193 /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 262148A2156F6C8F001EE193 /* image1.jpg */; };
+		262148AA156F6C8F001EE193 /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 262148A3156F6C8F001EE193 /* image2.jpg */; };
+		262148AB156F6C8F001EE193 /* image3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 262148A4156F6C8F001EE193 /* image3.jpg */; };
+		262148AC156F6C8F001EE193 /* image4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 262148A5156F6C8F001EE193 /* image4.jpg */; };
+		262148AD156F6C8F001EE193 /* image5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 262148A6156F6C8F001EE193 /* image5.jpg */; };
+		262148AE156F6C8F001EE193 /* image6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 262148A7156F6C8F001EE193 /* image6.jpg */; };
+		269C96A715727C8D00979091 /* ImageBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 269C96A615727C8D00979091 /* ImageBuffer.m */; };
 		26A60B751565482200A74DDC /* ImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A60B741565482200A74DDC /* ImageScrollView.m */; };
 		26E99953155FB175007F9E5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E99952155FB175007F9E5F /* UIKit.framework */; };
 		26E99955155FB175007F9E5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E99954155FB175007F9E5F /* Foundation.framework */; };
@@ -36,11 +39,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		26A528EE15615BFE00BFCD79 /* image0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image0.jpg; path = ImageFlowViewer/resources/image0.jpg; sourceTree = SOURCE_ROOT; };
-		26A528EF15615BFE00BFCD79 /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image1.jpg; path = ImageFlowViewer/resources/image1.jpg; sourceTree = SOURCE_ROOT; };
-		26A528F115615BFE00BFCD79 /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image2.jpg; path = ImageFlowViewer/resources/image2.jpg; sourceTree = SOURCE_ROOT; };
-		26A528F215615BFE00BFCD79 /* image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image3.jpg; path = ImageFlowViewer/resources/image3.jpg; sourceTree = SOURCE_ROOT; };
-		26A528F315615BFE00BFCD79 /* image4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image4.jpg; path = ImageFlowViewer/resources/image4.jpg; sourceTree = SOURCE_ROOT; };
+		262148A1156F6C8F001EE193 /* image0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image0.jpg; sourceTree = "<group>"; };
+		262148A2156F6C8F001EE193 /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
+		262148A3156F6C8F001EE193 /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
+		262148A4156F6C8F001EE193 /* image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image3.jpg; sourceTree = "<group>"; };
+		262148A5156F6C8F001EE193 /* image4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image4.jpg; sourceTree = "<group>"; };
+		262148A6156F6C8F001EE193 /* image5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image5.jpg; sourceTree = "<group>"; };
+		262148A7156F6C8F001EE193 /* image6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image6.jpg; sourceTree = "<group>"; };
+		269C96A515727C8D00979091 /* ImageBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBuffer.h; sourceTree = SOURCE_ROOT; };
+		269C96A615727C8D00979091 /* ImageBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBuffer.m; sourceTree = SOURCE_ROOT; };
 		26A60B731565482200A74DDC /* ImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageScrollView.h; path = ImageFlowViewer/ImageScrollView.h; sourceTree = SOURCE_ROOT; };
 		26A60B741565482200A74DDC /* ImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageScrollView.m; path = ImageFlowViewer/ImageScrollView.m; sourceTree = SOURCE_ROOT; };
 		26E9994E155FB175007F9E5F /* ImageFlowViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageFlowViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,22 +90,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		26A528D015615BB800BFCD79 /* resources */ = {
+		262148A0156F6C8F001EE193 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				26A528EE15615BFE00BFCD79 /* image0.jpg */,
-				26A528EF15615BFE00BFCD79 /* image1.jpg */,
-				26A528F115615BFE00BFCD79 /* image2.jpg */,
-				26A528F215615BFE00BFCD79 /* image3.jpg */,
-				26A528F315615BFE00BFCD79 /* image4.jpg */,
+				262148A1156F6C8F001EE193 /* image0.jpg */,
+				262148A2156F6C8F001EE193 /* image1.jpg */,
+				262148A3156F6C8F001EE193 /* image2.jpg */,
+				262148A4156F6C8F001EE193 /* image3.jpg */,
+				262148A5156F6C8F001EE193 /* image4.jpg */,
+				262148A6156F6C8F001EE193 /* image5.jpg */,
+				262148A7156F6C8F001EE193 /* image6.jpg */,
 			);
-			name = resources;
-			path = ../../../../Desktop/resources;
+			path = resources;
 			sourceTree = "<group>";
 		};
 		26E99943155FB174007F9E5F = {
 			isa = PBXGroup;
 			children = (
+				262148A0156F6C8F001EE193 /* resources */,
 				26E99958155FB175007F9E5F /* ImageFlowViewer */,
 				26E99951155FB175007F9E5F /* Frameworks */,
 				26E9994F155FB175007F9E5F /* Products */,
@@ -130,12 +139,13 @@
 			children = (
 				26A60B731565482200A74DDC /* ImageScrollView.h */,
 				26A60B741565482200A74DDC /* ImageScrollView.m */,
-				26A528D015615BB800BFCD79 /* resources */,
 				26E99996155FF442007F9E5F /* AppDelegate.h */,
 				26E99997155FF442007F9E5F /* AppDelegate.m */,
 				26E99998155FF442007F9E5F /* ViewController.h */,
 				26E99999155FF442007F9E5F /* ViewController.m */,
 				26E99959155FB175007F9E5F /* Supporting Files */,
+				269C96A515727C8D00979091 /* ImageBuffer.h */,
+				269C96A615727C8D00979091 /* ImageBuffer.m */,
 			);
 			name = ImageFlowViewer;
 			path = ImageFlowedViewer;
@@ -233,11 +243,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				26E999A0155FF53B007F9E5F /* InfoPlist.strings in Resources */,
-				26A528F415615BFE00BFCD79 /* image0.jpg in Resources */,
-				26A528F515615BFE00BFCD79 /* image1.jpg in Resources */,
-				26A528F715615BFE00BFCD79 /* image2.jpg in Resources */,
-				26A528F815615BFE00BFCD79 /* image3.jpg in Resources */,
-				26A528F915615BFE00BFCD79 /* image4.jpg in Resources */,
+				262148A8156F6C8F001EE193 /* image0.jpg in Resources */,
+				262148A9156F6C8F001EE193 /* image1.jpg in Resources */,
+				262148AA156F6C8F001EE193 /* image2.jpg in Resources */,
+				262148AB156F6C8F001EE193 /* image3.jpg in Resources */,
+				262148AC156F6C8F001EE193 /* image4.jpg in Resources */,
+				262148AD156F6C8F001EE193 /* image5.jpg in Resources */,
+				262148AE156F6C8F001EE193 /* image6.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +287,7 @@
 				26E9999B155FF442007F9E5F /* ViewController.m in Sources */,
 				26E999A4155FF56C007F9E5F /* main.m in Sources */,
 				26A60B751565482200A74DDC /* ImageScrollView.m in Sources */,
+				269C96A715727C8D00979091 /* ImageBuffer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,9 +14,7 @@
 @property ( nonatomic, strong ) UIScrollView* scrollView;
 @property ( nonatomic, strong ) UIView* container;
 
-@property ( nonatomic, strong ) ImageScrollView* imageView0;
-@property ( nonatomic, strong ) ImageScrollView* imageView1;
-@property ( nonatomic, strong ) ImageScrollView* imageView2;
+
 
 
 
