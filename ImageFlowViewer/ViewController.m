@@ -9,41 +9,28 @@
 #import "ViewController.h"
 #import "ImageScrollView.h"
 
-typedef enum
-{
-    ViewStateLeftEdge = 0,
-    ViewStateNotEdge = 1,
-    ViewStateRightEdge = 2
-} ViewState;
-
 @interface ViewController ()
-{
-    ViewState viewState;
-}
 
 @property ( nonatomic, strong ) ImageScrollView* imageView0;
 @property ( nonatomic, strong ) ImageScrollView* imageView1;
 @property ( nonatomic, strong ) ImageScrollView* imageView2;
-@property ( nonatomic, assign ) int currentPageNo;   // 現在表示（ View Center )コンテンツのページ番号, 0,1,2...
-@property ( nonatomic, assign ) int pageMax;            // コンテンツページ最大値
-@property ( nonatomic, assign ) int oldViewIndex;       // Center Viewのインデックス
-@property ( nonatomic, assign ) CGSize contentsSize;    // 画像のサイズ
+@property ( nonatomic, assign ) CGSize contentsSize;
+@property ( nonatomic, assign ) int page;   // 画像のサイズ
+@property ( nonatomic, assign ) int pageMax;
 @property ( nonatomic, assign ) CGRect left;
 @property ( nonatomic, assign ) CGRect center;
 @property ( nonatomic, assign ) CGRect right;
 
-- ( void ) moveImageFrom: ( ImageScrollView* ) sourceView to: ( ImageScrollView* ) targetView;
-- ( void ) setImage: ( ImageScrollView* ) imageView  index: ( int ) index;
+
+- ( void ) setImage: ( ImageScrollView* ) imageView  index: ( int ) index location: ( CGRect ) frame;
 - ( void ) layoutViews;
 - ( void ) updateView;
-- ( void ) slideToRight;
-- ( void ) slideToLeft;
 
 @end
 
 @implementation ViewController
 @synthesize scrollView,  container, imageView0, imageView1, imageView2;
-@synthesize currentPageNo, pageMax, oldViewIndex, contentsSize;
+@synthesize page, pageMax, contentsSize;
 @synthesize left, center, right;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -55,12 +42,13 @@ typedef enum
     return self;
 }
 
-- ( void ) setImage: ( ImageScrollView* ) imageView  index: ( int ) index
+- ( void ) setImage: ( ImageScrollView* ) imageView  index: ( int ) index location: ( CGRect ) frame
 {
     NSString* f = [ [ NSString alloc ] initWithFormat: @"image%d.jpg", index ];
     UIImage* image = [ UIImage imageNamed: f ];
     imageView.imageView.image = nil;
     [ imageView setImage: image ];
+    [ imageView setFrame: frame ];
 }
 
 - (void)viewDidLoad
@@ -100,17 +88,8 @@ typedef enum
     scrollView.backgroundColor = [ UIColor grayColor ];
     scrollView.pagingEnabled = YES;
     
-    [ self setImage: self.imageView0 index: 0 ];
-    [ self.imageView0 setFrame: left ];
-    [ self setImage: self.imageView1 index: 1 ];
-    [ self.imageView1 setFrame: center ];
-    self.imageView2.imageView.image = nil;
-    [ self.imageView2 setFrame: CGRectZero ];
-    
+    page = -1;
     pageMax = 7;
-    currentPageNo = 0;
-    oldViewIndex = 0;
-    viewState = ViewStateLeftEdge;
 }
 
 - (void)viewDidUnload
@@ -156,127 +135,56 @@ typedef enum
     targetView.imageView.image = sourceView.imageView.image; 
 }
 
-- ( void ) slideToRight
-{
-    // 現在既に右端のときは移動しない
-    if( currentPageNo > pageMax ) return;
-    
-    DLog( @">>>" ); 
-    
-    currentPageNo++;
-    if( currentPageNo == pageMax - 1 ) {
-        // 右端に移動
-        CGRect frame = CGRectMake( 0, 0, contentsSize.width * 2, contentsSize.height );
-        [ self.scrollView setFrame: frame ];
-        [ self.container setFrame: frame ];
-        
-        // 左にRotate
-        [ self moveImageFrom: self.imageView2 to: self.imageView1 ];
-        [ self.imageView2 setFrame: center ];
-        
-        [ self moveImageFrom: self.imageView1 to: self.imageView0 ];
-        [ self.imageView1 setFrame: left ];
-                
-        self.imageView2.imageView.image = nil;
-        [ self.imageView2 setFrame: CGRectZero ];
-        
-        [ self.scrollView setContentOffset: center.origin ];           
-        
-        viewState = ViewStateRightEdge;
-    }
-    else {
-        // 右端ではない
-        CGRect frame = CGRectMake( 0, 0, contentsSize.width * 3, contentsSize.height );
-        [ self.scrollView setFrame: frame ];
-        [ self.container setFrame: frame ];
-        
-        // 左にRotate
-        [ self moveImageFrom: self.imageView1 to: self.imageView0 ];
-        [ self.imageView0 setFrame: left ];
-        
-        if( self.imageView2.imageView == nil ) 
-            [ self setImage: self.imageView2 index: currentPageNo + 1 ];
-        [ self moveImageFrom: self.imageView2 to: self.imageView1 ];
-        [ self.imageView1 setFrame: center ];
-        
-        [ self setImage: self.imageView0 index: currentPageNo + 2 ];
-        [ self moveImageFrom: self.imageView0 to: self.imageView1 ];
-        [ self.imageView1 setFrame: right ];
-        
-        [ self.scrollView setContentOffset: center.origin ];        
-        viewState = ViewStateNotEdge;
-    }
-}
 
-- ( void ) slideToLeft
-{
-    // 左端のときは移動しない
-    if( currentPageNo == 0 ) return;
-    
-    DLog( @"<<<" );
-    
-    currentPageNo--;
-    if( currentPageNo == 0 ) {
-        //左端に移動
-        CGRect frame = CGRectMake( 0, 0, contentsSize.width * 2, contentsSize.height );
-        [ self.scrollView setFrame: frame ];
-        [ self.container setFrame: frame ];
-        
-        
-        self.imageView2.imageView.image = nil;
-        [ self.imageView2 setFrame: CGRectZero ];
-        
-        [ self.scrollView setContentOffset: left.origin ];          
-        
-        viewState = ViewStateLeftEdge;
-    }
-    else {
-        // 左端ではない
-        CGRect frame = CGRectMake( 0, 0, contentsSize.width * 3, contentsSize.height );
-        [ self.scrollView setFrame: frame ];
-        [ self.container setFrame: frame ];
-        
-        // 右にRotate
-        [ self moveImageFrom: self.imageView1 to: self.imageView2 ];
-        
-        [ self moveImageFrom: self.imageView0 to: self.imageView1 ];
-        [ self.imageView1 setFrame: center ];
-        
-        [ self setImage: self.imageView0 index: currentPageNo - 1 ];
-        [ self moveImageFrom: self.imageView0 to: self.imageView1 ];      
-        
-        viewState = ViewStateNotEdge;
-    }
-}
 
 - ( void ) layoutViews
 {
-    float viewIndex =  self.scrollView.contentOffset.x / ( float ) contentsSize.width ;
-    float delta = viewIndex - ( float ) oldViewIndex;
-    NSLog( @"view index... old: %d  current: %f ( %f )", oldViewIndex, viewIndex, delta );
-
-    BOOL slided = YES;
-    switch( ( int ) viewState ) {
-            
-        case ViewStateLeftEdge:
-            if ( delta >= 1.0 ) [ self slideToRight ]; else slided = NO;
-                
-        break;
-            
-        case ViewStateNotEdge:
-            if ( delta >= 1.0 ) [ self slideToRight ];
-            else if( delta <= -1.0 ) [ self slideToLeft ];
-            else slided = NO;
-        break;
-            
-        case ViewStateRightEdge:
-            if ( delta <= 1.0 ) [ self slideToLeft ]; else slided = NO;
-        break;
+    CGRect location;
+    
+    float offset  =  self.scrollView.contentOffset.x;
+    int viewIndex = ( int ) ( offset / contentsSize.width );
+    
+    int viewCount = 0;
+    
+    if( viewIndex == 0 ) {
+        // 左にフリック
+        if( page >= 0 ) page--;
+    }
+    else if ( viewIndex >= 1 ) {
+        // 右にフリック
+        if( page < pageMax - 2 )  page++;
     }
     
-    if ( slided ) {
-        oldViewIndex = ( int ) viewIndex;
+    
+    // 左
+    if( page >= 0 ) {
+        [ self setImage: imageView0 index: page location: left ];
+        viewCount++;
     }
+    else {
+        imageView0.imageView.image = nil;
+        [ imageView0 setFrame: CGRectZero ];
+    }
+    
+    // 中
+    if( viewCount == 0 ) location = left; else location = center;
+    [ self setImage: imageView1 index: page + 1 location: location ]; 
+    viewCount++;
+
+    // 右
+    if( viewCount == 1 ) location = center; else location = right;
+    if( page < pageMax - 2 ) {
+        [ self setImage: imageView2 index: page + 2 location: location ]; 
+        viewCount++;
+    }
+    else {
+        imageView2.imageView.image = nil;
+        [ imageView2 setFrame: CGRectZero ];
+    }
+
+    self.scrollView.contentSize = CGSizeMake( viewCount * contentsSize.width, contentsSize.height );
+    self.container.frame = CGRectMake( 0, 0, viewCount * contentsSize.width, contentsSize.height );
+  
 }
 
 @end

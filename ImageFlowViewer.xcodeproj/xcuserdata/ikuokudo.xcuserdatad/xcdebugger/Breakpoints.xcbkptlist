@@ -8,13 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "ImageFlowViewer/ViewController.m"
-         timestampString = "359806983.77764"
+         timestampString = "359998678.352778"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "280"
-         endingLineNumber = "280"
-         landmarkName = "-layoutViews"
-         landmarkType = "5">
+         startingLineNumber = "208"
+         endingLineNumber = "208">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
