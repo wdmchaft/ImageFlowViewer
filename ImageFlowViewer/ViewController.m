@@ -20,7 +20,7 @@
 @property ( nonatomic, assign ) CGRect left;
 @property ( nonatomic, assign ) CGRect center;
 @property ( nonatomic, assign ) CGRect right;
-
+@property ( nonatomic, assign ) BOOL initial;
 
 - ( void ) setImage: ( ImageScrollView* ) imageView  index: ( int ) index location: ( CGRect ) frame;
 - ( void ) layoutViews;
@@ -32,6 +32,7 @@
 @synthesize scrollView,  container, imageView0, imageView1, imageView2;
 @synthesize page, pageMax, contentsSize;
 @synthesize left, center, right;
+@synthesize initial;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -90,6 +91,21 @@
     
     page = -1;
     pageMax = 7;
+    // 左
+    imageView0.imageView.image = nil;
+    [ imageView0 setFrame: CGRectZero ];
+    
+    // 中
+    [ self setImage: imageView1 index: page + 1 location: center ]; 
+    
+    // 右
+    [ self setImage: imageView2 index: page + 2 location: right ]; 
+    
+    self.scrollView.contentSize = CGSizeMake( 2 * contentsSize.width, contentsSize.height );
+    self.container.frame = CGRectMake( 0, 0, 2 * contentsSize.width, contentsSize.height );
+    self.scrollView.contentOffset = imageView1.frame.origin;
+
+    
 }
 
 - (void)viewDidUnload
@@ -144,17 +160,31 @@
     float offset  =  self.scrollView.contentOffset.x;
     int viewIndex = ( int ) ( offset / contentsSize.width );
     
+    NSLog( @" view index: %d ", viewIndex );
+    
+
+        if( viewIndex == 0 ) {
+            // 左にフリック
+            if( page >= 0 ) { 
+                page--;
+                NSLog( @"<<" );
+            }
+            else return;
+        }
+        else if ( viewIndex >= 1 ) {
+            // 右にフリック
+            if( page < pageMax - 2 ) {
+                page++;
+                NSLog( @">>" );
+            }
+            else return;
+        }
+        else return;
+
+    
+    NSLog( @"page: %d", page );
+    
     int viewCount = 0;
-    
-    if( viewIndex == 0 ) {
-        // 左にフリック
-        if( page >= 0 ) page--;
-    }
-    else if ( viewIndex >= 1 ) {
-        // 右にフリック
-        if( page < pageMax - 2 )  page++;
-    }
-    
     
     // 左
     if( page >= 0 ) {
@@ -184,7 +214,7 @@
 
     self.scrollView.contentSize = CGSizeMake( viewCount * contentsSize.width, contentsSize.height );
     self.container.frame = CGRectMake( 0, 0, viewCount * contentsSize.width, contentsSize.height );
-  
+    self.scrollView.contentOffset = imageView1.frame.origin;
 }
 
 @end
